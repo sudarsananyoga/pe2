@@ -7,24 +7,16 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class MemberVariableTest {
-	private static MemberVariable m;
-    @BeforeClass
-    public static void setup()
-    {
-    m=new MemberVariable("Harry Potter",30,2500.3);
-    }
-    @AfterClass
-    public static void teardown()
-    {
-    	m=null;
-    }
+ 
 	@Test
 	public void test1() {
-	  String result=m.var();
+		MemberVariable m1=new MemberVariable("Harry Potter",30,2500.3);
+	  String result=m1.var();
 		assertEquals("Harry Potter 30 2500.3",result);
 	}
 	public void test2() {
-		  String result=m.var();
+		MemberVariable m1=new MemberVariable("bob",40,2500.3);
+		  String result=m1.var();
 			assertEquals("ERROR",result);
 		}
 	public void test() {

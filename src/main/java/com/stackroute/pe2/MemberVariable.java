@@ -3,20 +3,21 @@ class Member
 {
  protected String name="";
  protected int age;
- protected float salary;
-  int res;
+ protected double salary;
+ 
 }
 public class MemberVariable extends Member
 {
-    MemberVariable(String name,int age,float salary)
+	Member m=new Member();
+    MemberVariable(String name,int age,double salary)
     {
-    	this.name=name;
-    	this.age=age;
-    	this.salary=salary;
+    	m.name=name;
+    	m.age=age;
+        m.salary=salary;
     }
     public String var()
     {
-    	String res=this.name+" "+this.age+" "+this.salary;
+    	String res=m.name+" "+m.age+" "+m.salary;
     	return res;
     }
 }
